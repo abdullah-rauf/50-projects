@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+button {
+    background-color: peru;
+    color: #fff;
+    border: 1px peru solid;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 20px 30px;
+    overflow: hidden;
+    margin: 10px 0px;
+    position: relative;
+}
+
+button:focus {
+    outline: none;
+}
+
+button .circle {
+    position: absolute;
+    background-color: #fff;
+    height: 100px;
+    width: 100px;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    animation: scale 0.5s ease-out;
+}
+
+@keyframes scale {
+    to {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
